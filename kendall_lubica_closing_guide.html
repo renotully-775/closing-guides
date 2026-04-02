@@ -1,0 +1,200 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+  .cg-wrap { font-family: 'Poppins', sans-serif; padding: 1.5rem 0; }
+  .cg-header { background: #5B6C8F; border-radius: 12px; padding: 1.5rem 1.75rem; margin-bottom: 1.5rem; }
+  .cg-header-top { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
+  .cg-avatar { width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; color: #fff; flex-shrink: 0; }
+  .cg-header h1 { color: #fff; font-size: 20px; font-weight: 600; margin: 0; }
+  .cg-header p { color: rgba(255,255,255,0.75); font-size: 13px; margin: 0; }
+  .cg-header-meta { display: flex; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
+  .cg-meta-pill { background: rgba(255,255,255,0.15); border-radius: 20px; padding: 4px 12px; font-size: 12px; color: rgba(255,255,255,0.9); }
+  .cg-section-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #5B6C8F; text-transform: uppercase; margin-bottom: 10px; }
+  .cg-dates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 1.5rem; }
+  .cg-date-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 10px; padding: 12px 14px; border-top: 3px solid #5B6C8F; }
+  .cg-date-card.green { border-top-color: #A8B5A2; }
+  .cg-date-label { font-size: 11px; color: var(--color-text-secondary); font-weight: 500; margin-bottom: 4px; }
+  .cg-date-val { font-size: 15px; font-weight: 600; color: var(--color-text-primary); }
+  .cg-date-note { font-size: 10px; color: var(--color-text-secondary); margin-top: 2px; }
+  .cg-steps { display: flex; flex-direction: column; gap: 8px; }
+  .cg-step { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 12px; overflow: hidden; }
+  .cg-step-header { display: flex; align-items: center; gap: 12px; padding: 14px 16px; cursor: pointer; user-select: none; }
+  .cg-step-header:hover { background: var(--color-background-secondary); }
+  .cg-badge { width: 30px; height: 30px; border-radius: 50%; background: #5B6C8F; color: #fff; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .cg-step-title { font-size: 14px; font-weight: 600; color: var(--color-text-primary); flex: 1; }
+  .cg-chevron { font-size: 12px; color: var(--color-text-secondary); transition: transform 0.2s; }
+  .cg-chevron.open { transform: rotate(180deg); }
+  .cg-step-body { display: none; padding: 0 16px 16px 58px; font-size: 13px; line-height: 1.7; color: var(--color-text-primary); }
+  .cg-step-body.open { display: block; }
+  .cg-highlight { border-left: 3px solid #5B6C8F; background: var(--color-background-secondary); border-radius: 0 8px 8px 0; padding: 10px 12px; margin: 10px 0; font-size: 13px; }
+  .cg-highlight.green { border-left-color: #A8B5A2; }
+  .cg-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .cg-pill { background: #eef0f5; color: #5B6C8F; font-size: 11px; font-weight: 600; border-radius: 20px; padding: 3px 10px; }
+  .cg-pill.green { background: #f0f3ef; color: #6b7d67; }
+  .cg-ul { margin: 8px 0; padding-left: 16px; }
+  .cg-ul li { margin-bottom: 5px; }
+  .cg-footer { margin-top: 1.5rem; border-top: 0.5px solid var(--color-border-tertiary); padding-top: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .cg-footer-name { font-size: 12px; font-weight: 600; color: #5B6C8F; }
+  .cg-footer-sub { font-size: 11px; color: var(--color-text-secondary); }
+</style>
+
+<div class="cg-wrap">
+  <div class="cg-header">
+    <div class="cg-header-top">
+      <div class="cg-avatar">KL</div>
+      <div>
+        <h1>Closing Guide for Kendall &amp; Lubica</h1>
+        <p>Prepared by David Tully &middot; Real Brokerage</p>
+      </div>
+    </div>
+    <div class="cg-header-meta">
+      <span class="cg-meta-pill">Offer accepted: Apr 1, 2026</span>
+      <span class="cg-meta-pill">Closing: Apr 30, 2026</span>
+    </div>
+  </div>
+
+  <div class="cg-section-label">Key dates</div>
+  <div class="cg-dates-grid">
+    <div class="cg-date-card">
+      <div class="cg-date-label">Closing date</div>
+      <div class="cg-date-val">Apr 30, 2026</div>
+      <div class="cg-date-note">Target finish line</div>
+    </div>
+    <div class="cg-date-card green">
+      <div class="cg-date-label">Inspection deadline</div>
+      <div class="cg-date-val">Apr 16, 2026</div>
+      <div class="cg-date-note">15 days from acceptance</div>
+    </div>
+    <div class="cg-date-card green">
+      <div class="cg-date-label">Insurance deadline</div>
+      <div class="cg-date-val">Apr 16, 2026</div>
+      <div class="cg-date-note">15 days from acceptance</div>
+    </div>
+    <div class="cg-date-card">
+      <div class="cg-date-label">Appraisal contingency</div>
+      <div class="cg-date-val">Apr 26, 2026</div>
+      <div class="cg-date-note">25 days from acceptance</div>
+    </div>
+    <div class="cg-date-card">
+      <div class="cg-date-label">Loan contingency</div>
+      <div class="cg-date-val">Apr 26, 2026</div>
+      <div class="cg-date-note">25 days from acceptance</div>
+    </div>
+  </div>
+
+  <div class="cg-section-label">Your closing steps</div>
+  <div class="cg-steps">
+
+    <div class="cg-step">
+      <div class="cg-step-header" onclick="toggle(this)">
+        <div class="cg-badge">1</div>
+        <span class="cg-step-title">Earnest money deposit</span>
+        <span class="cg-chevron">&#9660;</span>
+      </div>
+      <div class="cg-step-body">
+        <p>The earnest money deposit needs to be dropped off or delivered to the title company within <strong>2 business days</strong> of your accepted offer date.</p>
+        <div class="cg-highlight">David will send the contract to your lender and order inspections right away, so things move quickly from day one.</div>
+        <div class="cg-pills">
+          <span class="cg-pill">Due by Apr 3, 2026</span>
+          <span class="cg-pill">Deliver to title company</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cg-step">
+      <div class="cg-step-header" onclick="toggle(this)">
+        <div class="cg-badge">2</div>
+        <span class="cg-step-title">Work with your lender &amp; appraisal</span>
+        <span class="cg-chevron">&#9660;</span>
+      </div>
+      <div class="cg-step-body">
+        <p>This step is where you will do the most work during the transaction. Your lender will give you a checklist of documents they need for final loan approval. Get those over promptly and <strong>check your email daily</strong> since lenders move fast and missing a request can cause delays.</p>
+        <div class="cg-highlight green">The lender will also order the appraisal, often before inspections are even done. The appraisal confirms the home's value supports the loan amount. You do not need to do anything for it, but it is happening in the background at the same time you are working on your loan docs. David will keep you updated on both.</div>
+        <div class="cg-pills">
+          <span class="cg-pill green">Check email daily</span>
+          <span class="cg-pill green">Respond to lender quickly</span>
+          <span class="cg-pill green">Contingency: Apr 26</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cg-step">
+      <div class="cg-step-header" onclick="toggle(this)">
+        <div class="cg-badge">3</div>
+        <span class="cg-step-title">Inspections &amp; repair negotiations</span>
+        <span class="cg-chevron">&#9660;</span>
+      </div>
+      <div class="cg-step-body">
+        <p>After inspections are complete, David will help put together a repair request focused on <strong>safety items and major issues</strong>, not cosmetic things.</p>
+        <div class="cg-highlight">Here is how repair negotiations work:
+          <ul class="cg-ul" style="margin-top:8px;">
+            <li>The seller must be given the opportunity to make the repairs themselves. That is required by the contract.</li>
+            <li>However, we can also let the seller know you are open to a <strong>credit instead of repairs</strong>, which is often easier for everyone, especially since the seller is an investor.</li>
+            <li>It has to be one or the other, not both.</li>
+            <li>The seller can agree to all repairs, some repairs, offer a credit, or decline entirely.</li>
+          </ul>
+        </div>
+        <p>If the outcome is not acceptable to you, you have the right to cancel the transaction and <strong>receive your full earnest money deposit back</strong>.</p>
+        <div class="cg-pills">
+          <span class="cg-pill">Deadline: Apr 16</span>
+          <span class="cg-pill">Repairs or credit, not both</span>
+          <span class="cg-pill">Can cancel if needed</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cg-step">
+      <div class="cg-step-header" onclick="toggle(this)">
+        <div class="cg-badge">4</div>
+        <span class="cg-step-title">Final walkthrough</span>
+        <span class="cg-chevron">&#9660;</span>
+      </div>
+      <div class="cg-step-body">
+        <p>Typically <strong>1 to 2 days before closing</strong>, you and David will walk through the home together. The goal is to confirm the home is still in the same condition as when you made your offer and that no unexpected damage has occurred since the inspection.</p>
+        <div class="cg-highlight green">This is your last chance to flag anything before you own it, so take your time and look around carefully.</div>
+        <div class="cg-pills">
+          <span class="cg-pill green">Around Apr 28-29</span>
+          <span class="cg-pill green">David will schedule this</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cg-step">
+      <div class="cg-step-header" onclick="toggle(this)">
+        <div class="cg-badge">5</div>
+        <span class="cg-step-title">Signing &amp; closing day</span>
+        <span class="cg-chevron">&#9660;</span>
+      </div>
+      <div class="cg-step-body">
+        <p>You will sign your documents at the title company. Bring your <strong>driver's license</strong>.</p>
+        <p>Payment for your down payment and closing costs can be a <strong>cashier's check or a wire transfer</strong>. If you are wiring funds, we recommend doing it the <strong>day before closing</strong> since most bank wire cutoffs are around 1 to 2pm and a missed wire means a delayed closing.</p>
+        <div class="cg-highlight">Once the title company has your wire, your signed loan documents, and the lender funds the loan, everything is submitted to the county for recording. Once the county confirms the recording, you get the keys. That typically happens between <strong>12pm and 5pm</strong> on a business day.</div>
+        <div class="cg-pills">
+          <span class="cg-pill">Closing: Apr 30, 2026</span>
+          <span class="cg-pill">Bring driver's license</span>
+          <span class="cg-pill">Wire funds day before</span>
+          <span class="cg-pill">Keys after county records</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cg-footer">
+    <div>
+      <div class="cg-footer-name">David Tully &middot; Real Brokerage</div>
+      <div class="cg-footer-sub">Questions? Reach out anytime.</div>
+    </div>
+    <div style="font-size: 11px; color: var(--color-text-secondary);">Prepared for Kendall &amp; Lubica &middot; Apr 2026</div>
+  </div>
+</div>
+
+<script>
+function toggle(header) {
+  var body = header.nextElementSibling;
+  var chevron = header.querySelector('.cg-chevron');
+  var isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  chevron.classList.toggle('open', !isOpen);
+}
+</script>
